@@ -16,5 +16,4 @@ public class GitHubWebhookPayload {
     private Pusher pusher;
     private Sender sender;
     private List<Commit> commits;
-    private String ssh_url;
 }

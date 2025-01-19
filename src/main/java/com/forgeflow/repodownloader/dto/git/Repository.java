@@ -12,4 +12,6 @@ public class Repository {
     private String name;
     private String full_name;
     private Owner owner;
+    private String ssh_url;
+    private String clone_url;
 }
