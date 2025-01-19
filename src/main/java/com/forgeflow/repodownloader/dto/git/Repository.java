@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 public class Repository {
     private String id;
     private String name;
-    private String fullName;
+    private String full_name;
     private Owner owner;
 }

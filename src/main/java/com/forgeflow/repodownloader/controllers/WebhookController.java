@@ -19,8 +19,9 @@ public class WebhookController {
                                                 @RequestHeader("X-GitHub-Hook-ID") String hookId
     ) {
         System.out.println("Received webhook event: " + payload.getRef());
-        System.out.println("Repository: " + payload.getRepository().getFullName());
+        System.out.println("Repository: " + payload.getRepository().getFull_name());
         System.out.println("Pusher: " + payload.getPusher().getName());
+        System.out.println("Link: " + payload.getSsh_url());
 
         return ResponseEntity.status(HttpStatus.OK).body("Webhook received");
     }
