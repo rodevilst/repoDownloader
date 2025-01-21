@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: repoDownloader
+  kafka:
+    client-id: ${spring.application.name}
+    bootstrap-servers: 127.0.0.1:9094
+    consumer:
+      client-id: ${spring.application.name}-consumer
+      group-id: ${spring.application.name}-consumer-group
+      auto-offset-reset: latest
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    listener:
+      type: single
+      ack-mode: record
+      concurrency: 4
+logging:
+  level:
+    org.apache.kafka: WARN

@@ -9,5 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 public class Owner {
     private String login;
+    private String name;
     private String url;
+    private String visibility;
 }
